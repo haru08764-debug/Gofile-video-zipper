@@ -1,0 +1,14 @@
+{
+  "name": "gofile-video-zipper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Create a ZIP from videos in a public Gofile folder",
+  "type": "module",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "express": "^4.21.2",
+    "playwright": "^1.51.0"
+  }
+}
