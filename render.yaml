@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: gofile-video-zipper
+    runtime: node
+    plan: free
+    buildCommand: npm install && npx playwright install --with-deps chromium
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
