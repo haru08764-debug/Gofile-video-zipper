@@ -1,11 +1,7 @@
 services:
   - type: web
     name: gofile-video-zipper
-    runtime: node
+    runtime: docker
     plan: free
-    buildCommand: npm install && npx playwright install --with-deps chromium
-    startCommand: npm start
+    dockerfilePath: ./Dockerfile
     healthCheckPath: /health
-    envVars:
-      - key: NODE_VERSION
-        value: 20
